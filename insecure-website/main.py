@@ -36,7 +36,7 @@ class MainPageHandler(Handler):
     def post(self):
         self.response.headers.add_header('X-XSS-Protection', '0')
         comment = self.request.get("comment")
-        self.write(comment)
+        self.render("insecure.html", comment = comment)
 
 class SignInHandler(Handler):
     def get(self):
@@ -45,7 +45,7 @@ class SignInHandler(Handler):
     def post(self):
         username = self.request.get("username")
         password = self.request.get("password")
-        info = db.GqlQuery("SELECT * FROM User ")#WHERE username = '%s'" % username)
+        info = db.GqlQuery("SELECT * FROM User WHERE username = '%s'" % username)
         check_password = False
         for i in info:
             if i.password == password:
