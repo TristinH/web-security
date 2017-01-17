@@ -1,1 +1,1 @@
-# web-security
+This repository contains all the source code used in my presentation on web security for CS 463 Section 01 Winter Quarter 2017. Running it requires installation of Google App Engine developer kit and Python 2.7. Feel free to clone the repository and try things out on your own 
