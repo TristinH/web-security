@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>A Totally Secure Website</title>
+    </head>
+    <body>
+        <div>
+            <h1>A Totally Secure Website</h1>
+        </div>
+        <div>
+            <div>
+                <h2>Your Information</h2>
+            </div>
+            <div>
+                {% for i in user_info %}
+                <div>
+                    Username: {{i.username}}<br>
+                    Password: {{i.password}}
+                </div>
+
+                <hr>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

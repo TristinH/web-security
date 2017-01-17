@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>A Totally Secure Website</title>
+    </head>
+    <body>
+        <div>
+            <h1>A Totally Secure Website</h1>
+        </div>
+        <div>
+            <form method="post">
+                <div style="font-size: 30px">
+                    Enter your login and we'll check our super secure database
+                </div>
+                <div>
+                    Username
+                </div>
+                <div>
+                    <input name="username">
+                </div>
+                <div>
+                    Password
+                </div>
+                <div>
+                    <input type="password" name="password">
+                </div>
+                <input type="submit">
+
+                <div style="color: red">
+                    {{error}}
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
